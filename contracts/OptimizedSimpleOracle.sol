@@ -2,6 +2,13 @@
 
 pragma solidity ^0.8.0;
 
+
+/**
+ * OptimizedSimpleOracle contract is a slightly more optimized version of a simple oracle that is more suitable for gas efficiency. 
+ * It uses temporary storage to store the prices and clears the storage after use to free up space. 
+ * This contract is meant to be used as a teaching tool to demonstrate how to optimize contracts that use shared storage. 
+ * For a more optimized version of this contract, see SuperOptimizedSimpleOracle.sol.
+ */
 contract OptimizedSimpleOracle {
     mapping(address => uint) public temporaryPrices;
     // An array that stores the addresses of all the accounts that have updated the price

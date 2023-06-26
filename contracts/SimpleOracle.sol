@@ -2,6 +2,12 @@
 
 pragma solidity ^0.8.0;
 
+/**
+ * SimpleOracle contract is a demonstration of a simple oracle that is NOT optimized for gas efficiency. 
+ * It updates the storage with every price update, making it unsuitable for frequent storage reads and writes. 
+ * This contract is meant to be used as a teaching tool to demonstrate how to optimize contracts that use shared storage. 
+ * For optimized versions of this contract, see OptimizedSimpleOracle.sol and SuperOptimizedSimpleOracle.sol.
+ */
 contract SimpleOracle {
     mapping(address => uint) public prices;
     // An array that stores the addresses of all the accounts that have updated the price
