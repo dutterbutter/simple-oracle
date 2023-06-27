@@ -1,4 +1,4 @@
-import { Wallet, utils } from "zksync-web3";
+import { Wallet } from "zksync-web3";
 import * as ethers from "ethers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
@@ -41,7 +41,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // verify contract for tesnet & mainnet
   if (process.env.NODE_ENV != "test") {
     // Contract MUST be fully qualified name (e.g. path/sourceName:contractName)
-    const contractFullyQualifedName = "contracts/SuperOptimizedOracle.sol:SuperOptimizedOracle";
+    const contractFullyQualifedName = "contracts/SuperOptimizedSimpleOracle.sol:SuperOptimizedSimpleOracle";
 
     // Verify contract programmatically
     const verificationId = await hre.run("verify:verify", {

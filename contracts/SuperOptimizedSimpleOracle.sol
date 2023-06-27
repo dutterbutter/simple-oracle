@@ -3,12 +3,12 @@
 pragma solidity ^0.8.0;
 
 /**
- * SuperOptimizedOracle contract is even more optimized version of the OptimizedSimpleOracle contract that is even more suitable for gas efficiency. 
+ * SuperOptimizedSimpleOracle contract is even more optimized version of the OptimizedSimpleOracle contract that is even more suitable for gas efficiency. 
  * It uses a struct to store the data provider's ID and temporary price, and an array to store the addresses of all the accounts that have updated the price. 
  * It clears the data provider's temporary price after use to free up storage space. 
  * This contract is meant to be used as a teaching tool to demonstrate how to optimize contracts that use shared storage. 
  */
-contract SuperOptimizedOracle {
+contract SuperOptimizedSimpleOracle {
     // Struct to store the data provider's ID and temporary price
     struct DataProvider {
         uint id;
